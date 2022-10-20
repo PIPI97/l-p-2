@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = Number(prompt('Nhập số tiền cần gửi :'));
+        let month = Number(prompt('Nhập số tháng cần gửi :'));
+        let rate = Number(prompt('Nhập lãi suất (%/năm) :'));
+        let result;
+         result = money*(Math.pow(rate/100 +1 , month));
+        document.write(`Số tiền bạn nhận được là : ${result.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} vnđ `)
+    </script>
+</body>
+</html>

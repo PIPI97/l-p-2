@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+
+<body>
+    <script>
+        let asterisk = '*';
+        result = '';
+        for (i = 1; i <= 5; i++) {
+            result += asterisk;
+            document.write(result + '<br>')
+        }
+        document.write(`<br> ${result} <br>`)
+
+        for (i = 1; i <= 5; i++) {
+            result = result.slice(0, -1);
+            document.write(result + '<br>')
+        }
+        document.write('<br>')
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= 5; j++) {
+                if (i == 1 && j < 5 ||
+                 i == 2 && j < 4 || 
+                 i == 3 && j < 3 || 
+                 i == 4 && j == 1) {
+                    document.write('&nbsp&nbsp');
+                }
+                else {
+                    document.write('*');
+                }
+
+            } document.write('<br>')
+        }
+        document.write('<br>')
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= 5; j++) {
+                if (i == 1 && j > 0 || 
+                i == 2 && j > 1 || 
+                i == 3 && j > 2 || 
+                i == 4 && j > 3 || 
+                i == 5 && j == 5) {
+                    document.write('*');
+                }
+                else {
+                    document.write('&nbsp&nbsp');
+                }
+
+            } document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>
