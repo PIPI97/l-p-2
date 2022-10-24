@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+
+<body>
+    <table>
+        <caption> DICTIONARY</caption>
+        <tbody>
+            <tr>
+                <td><input type="text" placeholder="enter..." id="inputText"></td>
+                <td><input type="button" value="Search" onclick="Search()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="result"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var English = ['hello', 'banana', 'good bye', 'handsome', 'goodmorning'],
+            Vietnamese = ['xin chào', 'chuối', 'tạm biệt', 'đẹp trai', 'chào buổi sáng'],
+            resultall;
+        function Search() {
+            let text = inputText.value;
+            for (i = 0; i < English.length; i++) {
+                resultall = 'not found'
+                if (text == English[i]) {
+                    resultall = Vietnamese[i];
+                    break;
+                }
+            }
+            result.innerHTML = resultall
+        }
+        
+    </script>
+</body>
+
+</html>
