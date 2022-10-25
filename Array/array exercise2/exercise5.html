@@ -9,27 +9,31 @@
 </head>
 
 <body>
+    <!-- Nhập 2 mảng nếu value giống nhau không quan trọng thứ tự thì đúng ( 3 value mỗi mảng khác nhau) -->
     <script>
         let numbersa = new Array(3);
         let numbersb = new Array(3);
-        let result = true;
-
+       
         for (i = 0; i < 3; i++) {
-            numbersa[i] = prompt(` nhập giá trị thứ ${i+1} của a`)}
-
-        for (i = 0; i < 3; i++) {
-            numbersb[i] = prompt(` nhập giá trị thứ ${i+1} của b`)
+            numbersa[i] = prompt(` nhập giá trị thứ ${i + 1} của a ( 3 value khác nhau)`)
         }
-        document.write(`Mảng 1 : ${numbersa} <br> Mảng 2 : ${numbersb} <br>`)
         for (i = 0; i < 3; i++) {
-            for (j = 0; j < 3; j++) {
-                result= true;
-                if(numbersa[i]!=numbersb[j]){
-                    result=false;
-                    break;
-                }
+            numbersb[i] = prompt(` nhập giá trị thứ ${i + 1} của b ( 3 value khác nhau)`)
+        }
+
+        let isExist = false;
+        let isEqual = true;
+        document.write(`Mảng 1 : ${numbersa} <br> Mảng 2 : ${numbersb} <br>`)
+
+        for (i = 0; i < numbersa.length; i++) {
+  
+            isExist = numbersb.includes(numbersa[i]);
+            if (!isExist) {
+                isEqual = false;
+                break;
             }
-        }result==true?document.write('2 mảng giống nhau'):document.write('2 mảng khác nhau')
+        }
+        isEqual ? document.write('2 mảng giống nhau') : document.write('2 mảng khác nhau')
     </script>
 </body>
 
