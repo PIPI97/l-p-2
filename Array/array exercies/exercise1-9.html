@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbersa = new Array(10);
+        let numbersb = new Array(10);
+        let numbersc=[];
+        let result = '';
+        for (i = 0; i < 10; i++) {
+            numbersa[i] = Math.floor(Math.random() * 21)
+            numbersb[i] = Math.floor(Math.random() * 21)
+        }
+        numbersc= numbersa.concat(numbersb)
+
+        document.write(`Mảng a : <br> ${numbersa} <br>
+                        Mảng b : <br> ${numbersb} <br>
+                        Mảng c : <br> ${numbersc} `);
+
+    </script>
+</body>
+
+</html>
