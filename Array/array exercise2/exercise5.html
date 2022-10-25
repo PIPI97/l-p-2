@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbersa = new Array(3);
+        let numbersb = new Array(3);
+        let result = true;
+
+        for (i = 0; i < 3; i++) {
+            numbersa[i] = prompt(` nhập giá trị thứ ${i+1} của a`)}
+
+        for (i = 0; i < 3; i++) {
+            numbersb[i] = prompt(` nhập giá trị thứ ${i+1} của b`)
+        }
+        document.write(`Mảng 1 : ${numbersa} <br> Mảng 2 : ${numbersb} <br>`)
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                result= true;
+                if(numbersa[i]!=numbersb[j]){
+                    result=false;
+                    break;
+                }
+            }
+        }result==true?document.write('2 mảng giống nhau'):document.write('2 mảng khác nhau')
+    </script>
+</body>
+
+</html>
