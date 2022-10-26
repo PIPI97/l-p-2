@@ -10,19 +10,23 @@
 
 <body>
     <script>
-        var idol = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'],
-            star = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
         function starofIdol(yourIdol) {
+            var idol = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'],
+                star = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
             let result;
             for (i = 0; i < idol.length; i++) {
-                if (yourIdol == idol[i]) {
+                if (yourIdol === idol[i]) {
                     result = star[i]
                     alert(`star of idol is: ${result}`)
                     break;
-                } 
+                }
+            }
+            if(i==idol.length){
+                alert('i dont know your idol')
             }
         }
-        var idol = prompt(' enter your idol');
+        var idol = prompt('enter your idol');
         starofIdol(idol)
     </script>
 </body>
