@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" placeholder="foot to meter..." oninput="ipFchange(this.value)"
+        onchange="ipFchange(this.value)"> foot to meter 
+        <input type="number" disabled id="toMeter"> 
+
+        <br>
+
+    <input type="number" placeholder="meter to foot..." oninput="ipMchange(this.value)"
+        onchange="ipMchange(this.value)"> meter to foot 
+        <input type="number" disabled id="toFoot">
+
+    <script>
+        function ipFchange(ipfoot) {
+            toMeter.value = foottoMeter(ipfoot)
+        }
+
+        function ipMchange(ipmeter) {
+            toFoot.value = metertoFoot(ipmeter)
+        }
+
+        function foottoMeter(foot) {
+            var meter = 0.305 * foot
+            return meter
+        }
+        function metertoFoot(meter) {
+            var foot = 3.279 * meter
+            return foot
+        }
+
+    </script>
+</body>
+
+</html>
