@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+        function square(num) {
+            var result = num ** 2;
+            return result;
+        }
+        console.log(square(3));
+
+        // bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+
+        function circleArea(radius) {
+            var result = Math.PI * (radius ** 2)
+            return result;
+        }
+        function circlePerimeter(radius) {
+            var result = Math.PI * 2 * radius;
+            return result;
+        }
+        console.log(circleArea(3), circlePerimeter(3));
+
+        // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+        function factorial(num) {
+            var result = 1;
+            for (let i = 1; i <= num; i++) {
+                result *= i
+            } return result
+        }
+        console.log(factorial(3));
+
+        // bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+        function isNumber(inp) {
+            let result = !isNaN(inp)
+            return result;
+        }
+        console.log(isNumber('hello'));
+        console.log(isNumber(3));
+
+        // Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+
+        function compare(num1, num2, num3) {
+            let min = num1;
+            min > num2 ? min = num2 :
+                min > num3 ? min = num3 : min;
+            return min
+        }
+        console.log(compare(9, 342, 234));
+
+        // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+        //  kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+        //   Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về thì thông báo không có. 
+
+        function check(Characters) {
+            var aray = ['em', 'là', 'búp', 'măng', 'non', 'em', 'lại', 'thích', 'ăn', 'búp', 'măng'];
+            let count = 0;
+            let result;
+            for (let i = 0; i < aray.length; i++) {
+                if (aray[i] === Characters){
+                    count++;
+                }
+            }
+            if (count>0){
+                result=`value có tồn tại và xuất hiện ${count} lần`;
+            }
+            else{
+                result='value không tồn tại';
+            } return result;
+        }
+        console.log(check('măng'));
+        console.log(check('anh'));
+    </script>
+</body>
+
+</html>
