@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Check(num1, num2) {
+            let total = 0;
+            if (num1 > num2) {
+                document.write(' số thứ nhất lớn hơn số thứ hai ')
+            }
+            else {
+                total = num1 + num2
+                document.write(`tông hai số là ${total}`)
+            }
+
+        }
+        let number1 = Number(prompt('Nhập só thứ 1 của bạn')),
+            number2 = Number(prompt('Nhập só thứ 2 của bạn'));
+        Check(number1, number2);
+
+    </script>
+</body>
+
+</html>

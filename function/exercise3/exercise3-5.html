@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var idol = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'],
+            star = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function starofIdol(yourIdol) {
+            let result;
+            for (i = 0; i < idol.length; i++) {
+                if (yourIdol == idol[i]) {
+                    result = star[i]
+                    alert(`star of idol is: ${result}`)
+                    break;
+                } 
+            }
+        }
+        var idol = prompt(' enter your idol');
+        starofIdol(idol)
+    </script>
+</body>
+
+</html>
