@@ -40,11 +40,11 @@
             ctx.fillStyle = color;
             ctx.fill();
         }
-        let intID = setInterval(() => {
+        let intID = setInterval(function () {
             createCircle()
-        }, 50);
+        }, 20);
 
-        myCanvas.onclick= function(){
+        myCanvas.onclick = function () {
             clearInterval(intID)
         }
         function createMultipleCircle() {

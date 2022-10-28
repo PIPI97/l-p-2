@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+    <p id=areandperimeter></p>
+    <script>
+        let height = Number(prompt(' nhập chiều rộng (px) :')),
+            width = Number(prompt('nhập chiều dài (px) :')),
+            iprectangle = new rectangle(height, width);
+
+        renderRectangle(iprectangle);
+        areandperimeter.innerHTML = ` Diện tích hình chữ nhật là: ${iprectangle.area()} <br> Chu vi hình chữ nhật là: ${iprectangle.perimeter()}`
+
+
+        function rectangle(height, width,) {
+            this.height = height;
+            this.width = width;
+
+            this.area = function () {
+                return this.width * this.height;
+            }
+            this.perimeter = function () {
+                return (this.width + this.height) * 2;
+
+            }
+            this.setHeightandWidth = function (height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        }
+        function renderRectangle(rectangle) {
+            myCanvas.width = rectangle.width;
+            myCanvas.height = rectangle.height;
+            myCanvas.style.border = ' 1px solid red';
+        }
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+       
+        var grd = ctx.createLinearGradient(0, 0, width, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+       
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, width, height);
+    </script>
+</body>
+
+</html>
