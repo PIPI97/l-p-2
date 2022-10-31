@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class mobile {
+            constructor(name, battery, connecting) {
+                this.name = name;
+                this.battery = battery;
+                this.alert;
+                this.status = this.battery > 0 ? this.status = 'on' : this.status = 'off';
+                this.texting;
+                this.outbox;
+                this.inbox;
+            }
+
+            checkStatus() {
+                return this.alert = `your ${this.name} is ${this.status}`;
+            }
+            turnon_off() {
+                this.status == 'on' ? this.status = 'off' : this.status = 'on';
+                return this.status;
+            }
+            charging() {
+                this.battery == 100 ? this.alert = 'your battery is full' : this.alert = 'charging';
+                return this.alert;
+            }
+            text(youredit) {
+                if (this.status == 'on') {
+                    return (this.texting = youredit, this.battery--)
+                };
+            }
+            sendMessage() {
+                if (this.status == 'on') {
+                    this.outbox = this.texting;
+                    this.texting = '';
+                    return this.battery--;
+                }
+            }
+            showoutbox() {
+                if (this.status == 'on') {
+                    return (this.outbox,
+                        this.texting,
+                        this.battery--)
+                }
+            }
+            showinbox(ib) {
+                if (this.status == 'on') {
+                    return (this.inbox = ib.outbox,
+                        this.battery--)
+                }
+            }
+        }
+
+        var iphone = new mobile('iphone', 20);
+        // iphone.checkStatus();
+        // iphone.turnon_off();  
+        // iphone.checkStatus();
+        // iphone.turnon_off();  
+        // iphone.charging();
+        // iphone.text('hello there');
+        // iphone.sendMessage();
+        // iphone.showinbox(nokia);
+        console.log(iphone);
+
+        //Noikia mobile:
+        var nokia = new mobile('nokia', 10);
+        // nokia.showinbox(iphone);
+        // nokia.text("don't bother me");
+        // nokia.sendMessage();
+        console.log(nokia);
+
+    </script>
+</body>
+
+</html>
